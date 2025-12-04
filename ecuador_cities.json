@@ -1,5 +1,4 @@
 [
-  {"name": "Azuay", "province": "Azuay", "iso": "EC-A"},
   {"name": "Cuenca", "province": "Azuay", "iso": "EC-A"},
   {"name": "Camilo Ponce Enríquez", "province": "Azuay", "iso": "EC-A"},
   {"name": "Chordeleg", "province": "Azuay", "iso": "EC-A"},
@@ -16,7 +15,6 @@
   {"name": "Sevilla de Oro", "province": "Azuay", "iso": "EC-A"},
   {"name": "Sígsig", "province": "Azuay", "iso": "EC-A"},
 
-  {"name": "Bolívar", "province": "Bolívar", "iso": "EC-B"},
   {"name": "Guaranda", "province": "Bolívar", "iso": "EC-B"},
   {"name": "Caluma", "province": "Bolívar", "iso": "EC-B"},
   {"name": "Chillanes", "province": "Bolívar", "iso": "EC-B"},
@@ -25,7 +23,6 @@
   {"name": "Las Naves", "province": "Bolívar", "iso": "EC-B"},
   {"name": "San Miguel", "province": "Bolívar", "iso": "EC-B"},
 
-  {"name": "Cañar", "province": "Cañar", "iso": "EC-F"},
   {"name": "Azogues", "province": "Cañar", "iso": "EC-F"},
   {"name": "Biblián", "province": "Cañar", "iso": "EC-F"},
   {"name": "Cañar", "province": "Cañar", "iso": "EC-F"},
@@ -34,7 +31,6 @@
   {"name": "La Troncal", "province": "Cañar", "iso": "EC-F"},
   {"name": "Suscal", "province": "Cañar", "iso": "EC-F"},
 
-  {"name": "Carchi", "province": "Carchi", "iso": "EC-C"},
   {"name": "Tulcán", "province": "Carchi", "iso": "EC-C"},
   {"name": "Bolívar", "province": "Carchi", "iso": "EC-C"},
   {"name": "Espejo", "province": "Carchi", "iso": "EC-C"},
@@ -42,7 +38,6 @@
   {"name": "Montúfar", "province": "Carchi", "iso": "EC-C"},
   {"name": "San Pedro de Huaca", "province": "Carchi", "iso": "EC-C"},
 
-  {"name": "Chimborazo", "province": "Chimborazo", "iso": "EC-H"},
   {"name": "Riobamba", "province": "Chimborazo", "iso": "EC-H"},
   {"name": "Alausí", "province": "Chimborazo", "iso": "EC-H"},
   {"name": "Chambo", "province": "Chimborazo", "iso": "EC-H"},
@@ -54,7 +49,6 @@
   {"name": "Pallatanga", "province": "Chimborazo", "iso": "EC-H"},
   {"name": "Penipe", "province": "Chimborazo", "iso": "EC-H"},
 
-  {"name": "Cotopaxi", "province": "Cotopaxi", "iso": "EC-X"},
   {"name": "Latacunga", "province": "Cotopaxi", "iso": "EC-X"},
   {"name": "La Maná", "province": "Cotopaxi", "iso": "EC-X"},
   {"name": "Pangua", "province": "Cotopaxi", "iso": "EC-X"},
@@ -62,7 +56,6 @@
   {"name": "Salcedo", "province": "Cotopaxi", "iso": "EC-X"},
   {"name": "Saquisilí", "province": "Cotopaxi", "iso": "EC-X"},
 
-  {"name": "El Oro", "province": "El Oro", "iso": "EC-O"},
   {"name": "Machala", "province": "El Oro", "iso": "EC-O"},
   {"name": "Arenillas", "province": "El Oro", "iso": "EC-O"},
   {"name": "Atahualpa", "province": "El Oro", "iso": "EC-O"},
@@ -79,19 +72,16 @@
   {"name": "Zaruma", "province": "El Oro", "iso": "EC-O"},
 
   {"name": "Esmeraldas", "province": "Esmeraldas", "iso": "EC-E"},
-  {"name": "Esmeraldas", "province": "Esmeraldas", "iso": "EC-E"},
   {"name": "Eloy Alfaro", "province": "Esmeraldas", "iso": "EC-E"},
   {"name": "Muisne", "province": "Esmeraldas", "iso": "EC-E"},
   {"name": "Quinindé", "province": "Esmeraldas", "iso": "EC-E"},
   {"name": "Rioverde", "province": "Esmeraldas", "iso": "EC-E"},
   {"name": "San Lorenzo", "province": "Esmeraldas", "iso": "EC-E"},
 
-  {"name": "Galápagos", "province": "Galápagos", "iso": "EC-W"},
   {"name": "San Cristóbal", "province": "Galápagos", "iso": "EC-W"},
   {"name": "Santa Cruz", "province": "Galápagos", "iso": "EC-W"},
   {"name": "Isabela", "province": "Galápagos", "iso": "EC-W"},
 
-  {"name": "Guayas", "province": "Guayas", "iso": "EC-G"},
   {"name": "Guayaquil", "province": "Guayas", "iso": "EC-G"},
   {"name": "Alfredo Baquerizo Moreno", "province": "Guayas", "iso": "EC-G"},
   {"name": "Balao", "province": "Guayas", "iso": "EC-G"},
@@ -118,7 +108,6 @@
   {"name": "Simón Bolívar", "province": "Guayas", "iso": "EC-G"},
   {"name": "Yaguachi", "province": "Guayas", "iso": "EC-G"},
 
-  {"name": "Imbabura", "province": "Imbabura", "iso": "EC-I"},
   {"name": "Ibarra", "province": "Imbabura", "iso": "EC-I"},
   {"name": "Antonio Ante", "province": "Imbabura", "iso": "EC-I"},
   {"name": "Cotacachi", "province": "Imbabura", "iso": "EC-I"},
@@ -126,7 +115,6 @@
   {"name": "Pimampiro", "province": "Imbabura", "iso": "EC-I"},
   {"name": "San Miguel de Urcuquí", "province": "Imbabura", "iso": "EC-I"},
 
-  {"name": "Loja", "province": "Loja", "iso": "EC-L"},
   {"name": "Loja", "province": "Loja", "iso": "EC-L"},
   {"name": "Calvas", "province": "Loja", "iso": "EC-L"},
   {"name": "Catamayo", "province": "Loja", "iso": "EC-L"},
@@ -143,7 +131,6 @@
   {"name": "Sozoranga", "province": "Loja", "iso": "EC-L"},
   {"name": "Zapotillo", "province": "Loja", "iso": "EC-L"},
 
-  {"name": "Los Ríos", "province": "Los Ríos", "iso": "EC-R"},
   {"name": "Babahoyo", "province": "Los Ríos", "iso": "EC-R"},
   {"name": "Baba", "province": "Los Ríos", "iso": "EC-R"},
   {"name": "Buena Fe", "province": "Los Ríos", "iso": "EC-R"},
@@ -158,7 +145,6 @@
   {"name": "Ventanas", "province": "Los Ríos", "iso": "EC-R"},
   {"name": "Vinces", "province": "Los Ríos", "iso": "EC-R"},
 
-  {"name": "Manabí", "province": "Manabí", "iso": "EC-M"},
   {"name": "Portoviejo", "province": "Manabí", "iso": "EC-M"},
   {"name": "Bolívar", "province": "Manabí", "iso": "EC-M"},
   {"name": "Chone", "province": "Manabí", "iso": "EC-M"},
@@ -182,7 +168,6 @@
   {"name": "Tosagua", "province": "Manabí", "iso": "EC-M"},
   {"name": "Veinticuatro de Mayo", "province": "Manabí", "iso": "EC-M"},
 
-  {"name": "Morona Santiago", "province": "Morona Santiago", "iso": "EC-S"},
   {"name": "Morona", "province": "Morona Santiago", "iso": "EC-S"},
   {"name": "Gualaquiza", "province": "Morona Santiago", "iso": "EC-S"},
   {"name": "Huamboya", "province": "Morona Santiago", "iso": "EC-S"},
@@ -196,26 +181,22 @@
   {"name": "Taisha", "province": "Morona Santiago", "iso": "EC-S"},
   {"name": "Tiwintza", "province": "Morona Santiago", "iso": "EC-S"},
 
-  {"name": "Napo", "province": "Napo", "iso": "EC-N"},
   {"name": "Tena", "province": "Napo", "iso": "EC-N"},
   {"name": "Archidona", "province": "Napo", "iso": "EC-N"},
   {"name": "Carlos Julio Arosemena Tola", "province": "Napo", "iso": "EC-N"},
   {"name": "El Chaco", "province": "Napo", "iso": "EC-N"},
   {"name": "Quijos", "province": "Napo", "iso": "EC-N"},
 
-  {"name": "Orellana", "province": "Orellana", "iso": "EC-D"},
   {"name": "Francisco de Orellana", "province": "Orellana", "iso": "EC-D"},
   {"name": "Aguarico", "province": "Orellana", "iso": "EC-D"},
   {"name": "La Joya de los Sachas", "province": "Orellana", "iso": "EC-D"},
   {"name": "Loreto", "province": "Orellana", "iso": "EC-D"},
 
-  {"name": "Pastaza", "province": "Pastaza", "iso": "EC-Y"},
   {"name": "Puyo", "province": "Pastaza", "iso": "EC-Y"},
   {"name": "Arajuno", "province": "Pastaza", "iso": "EC-Y"},
   {"name": "Mera", "province": "Pastaza", "iso": "EC-Y"},
   {"name": "Santa Clara", "province": "Pastaza", "iso": "EC-Y"},
 
-  {"name": "Pichincha", "province": "Pichincha", "iso": "EC-P"},
   {"name": "Quito", "province": "Pichincha", "iso": "EC-P"},
   {"name": "Cayambe", "province": "Pichincha", "iso": "EC-P"},
   {"name": "Mejía", "province": "Pichincha", "iso": "EC-P"},
@@ -225,14 +206,11 @@
   {"name": "Rumiñahui", "province": "Pichincha", "iso": "EC-P"},
 
   {"name": "Santa Elena", "province": "Santa Elena", "iso": "EC-SE"},
-  {"name": "Santa Elena", "province": "Santa Elena", "iso": "EC-SE"},
   {"name": "La Libertad", "province": "Santa Elena", "iso": "EC-SE"},
   {"name": "Salinas", "province": "Santa Elena", "iso": "EC-SE"},
 
   {"name": "Santo Domingo", "province": "Santo Domingo de los Tsáchilas", "iso": "EC-SD"},
-  {"name": "Santo Domingo", "province": "Santo Domingo de los Tsáchilas", "iso": "EC-SD"},
 
-  {"name": "Sucumbíos", "province": "Sucumbíos", "iso": "EC-U"},
   {"name": "Nueva Loja", "province": "Sucumbíos", "iso": "EC-U"},
   {"name": "Cascales", "province": "Sucumbíos", "iso": "EC-U"},
   {"name": "Cuyabeno", "province": "Sucumbíos", "iso": "EC-U"},
@@ -242,7 +220,6 @@
   {"name": "Shushufindi", "province": "Sucumbíos", "iso": "EC-U"},
   {"name": "Sucumbíos", "province": "Sucumbíos", "iso": "EC-U"},
 
-  {"name": "Tungurahua", "province": "Tungurahua", "iso": "EC-T"},
   {"name": "Ambato", "province": "Tungurahua", "iso": "EC-T"},
   {"name": "Baños de Agua Santa", "province": "Tungurahua", "iso": "EC-T"},
   {"name": "Cevallos", "province": "Tungurahua", "iso": "EC-T"},
@@ -253,7 +230,6 @@
   {"name": "Santiago de Píllaro", "province": "Tungurahua", "iso": "EC-T"},
   {"name": "Tisaleo", "province": "Tungurahua", "iso": "EC-T"},
 
-  {"name": "Zamora Chinchipe", "province": "Zamora Chinchipe", "iso": "EC-Z"},
   {"name": "Zamora", "province": "Zamora Chinchipe", "iso": "EC-Z"},
   {"name": "Centinela del Cóndor", "province": "Zamora Chinchipe", "iso": "EC-Z"},
   {"name": "Chinchipe", "province": "Zamora Chinchipe", "iso": "EC-Z"},

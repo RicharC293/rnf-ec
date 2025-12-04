@@ -12,6 +12,17 @@ export default function SearchForm() {
   const [city, setCity] = useState(searchParams.get('city') || '');
   const { cities, loading: loadingCities } = useCities();
 
+  // Agrupar ciudades por provincia
+  const citiesByProvince = cities.reduce((acc, city) => {
+    if (!acc[city.province]) {
+      acc[city.province] = [];
+    }
+    acc[city.province].push(city);
+    return acc;
+  }, {} as Record<string, typeof cities>);
+
+  const sortedProvinces = Object.keys(citiesByProvince).sort();
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     const params = new URLSearchParams();
@@ -45,10 +56,14 @@ export default function SearchForm() {
             disabled={loadingCities}
           >
             <option value="" className="text-slate-400">Todas las ciudades</option>
-            {cities.map((c) => (
-              <option key={c.id} value={c.id} className="text-slate-900">
-                {c.name}
-              </option>
+            {sortedProvinces.map((province) => (
+              <optgroup key={province} label={province} className="text-slate-900 font-bold">
+                {citiesByProvince[province].map((c) => (
+                  <option key={c.id} value={c.id} className="text-slate-900 font-normal">
+                    {c.name}
+                  </option>
+                ))}
+              </optgroup>
             ))}
           </select>
         </div>
