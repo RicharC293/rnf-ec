@@ -35,7 +35,12 @@ export default function ResultCard({ result, cityName }: ResultCardProps) {
     setSharing(true);
 
     try {
-      const dataUrl = await toPng(cardRef.current, { cacheBust: true, backgroundColor: '#ffffff' });
+      const dataUrl = await toPng(cardRef.current, { 
+        cacheBust: true, 
+        backgroundColor: '#ffffff',
+        skipAutoScale: true,
+        pixelRatio: 2 // Ensure high quality
+      });
       
       // Convert Data URL to Blob
       const res = await fetch(dataUrl);
@@ -78,6 +83,7 @@ export default function ResultCard({ result, cityName }: ResultCardProps) {
               <img 
                 src={genderImage} 
                 alt="Avatar" 
+                crossOrigin="anonymous"
                 className="w-16 h-16 object-cover rounded-full"
                 style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover' }}
               />
