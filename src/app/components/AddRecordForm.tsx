@@ -46,6 +46,8 @@ export default function AddRecordForm() {
       await addDoc(collection(db, 'registros'), {
         first_name: formData.nombres,
         last_name: formData.apellidos,
+        // Campo optimizado para búsquedas (lowercase)
+        search_name: `${formData.nombres} ${formData.apellidos}`.toLowerCase(),
         age: Number(formData.edad),
         gender: formData.genero,
         city_id: formData.ciudad,

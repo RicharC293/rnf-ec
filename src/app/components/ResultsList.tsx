@@ -49,27 +49,46 @@ export default function ResultsList({ term, city, refreshKey }: ResultsListProps
         const resultsRef = collection(db, 'registros');
         let q;
 
-        if (city) {
-           // Si se ha seleccionado la ciudad, buscamos en esa ciudad
-           // Nota: Esto requiere un índice compuesto en Firestore: city_id ASC, created_at DESC
-           q = query(resultsRef, where('city_id', '==', city), orderBy('created_at', 'desc'), limit(50));
+        if (term.trim()) {
+          // BÚSQUEDA OPTIMIZADA (Server-side)
+          // Busca registros que empiecen con el término ingresado
+          const lowerTerm = term.toLowerCase();
+          
+          if (city) {
+             // Filtro por Ciudad + Nombre
+             // Requiere índice compuesto: city_id ASC, search_name ASC
+             q = query(
+               resultsRef, 
+               where('city_id', '==', city),
+               where('search_name', '>=', lowerTerm),
+               where('search_name', '<=', lowerTerm + '\uf8ff'),
+               orderBy('search_name'),
+               limit(50)
+             );
+          } else {
+             // Filtro solo por Nombre
+             // Requiere índice simple en search_name (automático)
+             q = query(
+               resultsRef, 
+               where('search_name', '>=', lowerTerm),
+               where('search_name', '<=', lowerTerm + '\uf8ff'),
+               orderBy('search_name'),
+               limit(50)
+             );
+          }
         } else {
-           // Si no se ha seleccionado ciudad, buscamos en general (limitado para ahorrar recursos)
-           q = query(resultsRef, orderBy('created_at', 'desc'), limit(50));
+          // BÚSQUEDA SOLO POR CIUDAD (o recientes)
+          if (city) {
+             q = query(resultsRef, where('city_id', '==', city), orderBy('created_at', 'desc'), limit(50));
+          } else {
+             q = query(resultsRef, orderBy('created_at', 'desc'), limit(50));
+          }
         }
 
         const querySnapshot = await getDocs(q);
-        let data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Result));
+        const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Result));
 
-        // Filtrado en cliente para búsqueda parcial de nombre/apellido si existe término
-        if (term.trim()) {
-          const lowerTerm = term.toLowerCase();
-          data = data.filter(item => {
-            const fullName = `${item.first_name} ${item.last_name}`.toLowerCase();
-            return fullName.includes(lowerTerm);
-          });
-        }
-
+        // Ya no necesitamos filtrar en cliente porque Firestore ya filtró
         setResults(data);
       } catch (error) {
         console.error("Error fetching documents: ", error);

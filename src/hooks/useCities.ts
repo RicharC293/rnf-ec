@@ -16,12 +16,15 @@ const CACHE_KEY = 'rnf_cities_data_v3'; // Incrementamos versión para limpiar c
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 horas
 
 export function useCities() {
-  const [cities, setCities] = useState<City[]>(cachedCities || []);
-  const [loading, setLoading] = useState(!cachedCities);
+  // Inicializamos siempre vacío para evitar Hydration Mismatch
+  // (El servidor no tiene caché, el cliente sí podría tenerlo, lo que causaría diferencias)
+  const [cities, setCities] = useState<City[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 1. Si ya tenemos datos en memoria (sesión actual), usarlos
+    // 1. Si ya tenemos datos en memoria (sesión actual), usarlos inmediatamente
     if (cachedCities) {
+      setCities(cachedCities);
       setLoading(false);
       return;
     }
