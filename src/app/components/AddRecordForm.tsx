@@ -28,13 +28,15 @@ export default function AddRecordForm() {
     edad: '',
     genero: '',
     ciudad: '',
-    descripcion: ''
+    descripcion: '',
+    acceptedTerms: false
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const value = e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: value
     });
   };
 
@@ -52,6 +54,7 @@ export default function AddRecordForm() {
         gender: formData.genero,
         city_id: formData.ciudad,
         description: formData.descripcion,
+        accepted_terms: formData.acceptedTerms,
         created_at: new Date()
       });
       
@@ -164,6 +167,46 @@ export default function AddRecordForm() {
           onChange={handleChange}
           placeholder="Detalla las cualidades de fidelidad..."
         />
+      </div>
+
+      <div className="flex items-start p-4 bg-blue-50 rounded-lg border border-blue-100">
+        <div className="flex items-center h-5">
+          <input
+            id="acceptedTerms"
+            name="acceptedTerms"
+            type="checkbox"
+            required
+            className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded cursor-pointer"
+            checked={formData.acceptedTerms}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="ml-3 text-sm">
+          <label htmlFor="acceptedTerms" className="font-medium text-slate-900 cursor-pointer select-none">
+            Confirmo que la información es real y acepto compartirla de forma <span className="font-bold text-blue-700">anónima</span>.
+          </label>
+          
+          <div className="mt-1 relative inline-block group">
+            <span className="text-blue-600 text-xs cursor-help border-b border-blue-400 border-dashed hover:text-blue-800 transition-colors flex items-center gap-1 w-fit">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clipRule="evenodd" />
+              </svg>
+              ¿Cómo protegemos tu identidad?
+            </span>
+            
+            {/* Tooltip */}
+            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 absolute bottom-full left-0 sm:left-1/2 sm:-translate-x-1/2 mb-2 w-72 p-4 bg-slate-800 text-white text-xs rounded-xl shadow-xl z-50 leading-relaxed pointer-events-none">
+              <p className="font-bold mb-2 text-blue-200">Tu seguridad es nuestra prioridad:</p>
+              <ul className="list-disc pl-4 space-y-1 text-slate-300">
+                <li>Este reporte es <strong>100% anónimo</strong>.</li>
+                <li>No guardamos tu ubicación ni datos personales.</li>
+                <li>Usamos <strong>Inteligencia Artificial</strong> para filtrar contenido ofensivo y proteger la integridad de la comunidad.</li>
+              </ul>
+              {/* Arrow */}
+              <div className="absolute top-full left-6 sm:left-1/2 sm:-translate-x-1/2 -mt-1 border-4 border-transparent border-t-slate-800"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="flex justify-end pt-4">
